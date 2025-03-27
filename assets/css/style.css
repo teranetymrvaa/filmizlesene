@@ -1,6 +1,6 @@
 /* nav start  */
 nav {
-  width: 100%;
+  width: 100vw;
   position: fixed;
   z-index: 1;
   height: 65px;
@@ -40,6 +40,9 @@ nav {
   gap: 20px;
   align-items: center;
 }
+.navbar-link i {
+  display: none;
+}
 .position {
   position: relative;
 }
@@ -75,7 +78,7 @@ nav {
 /* nav-alt start  */
 .navbar-alt {
   font-family: "Roboto", sans-serif;
-  height: 120px;
+  min-height: 120px;
   background-color: #264858;
   padding-top: 65px;
   display: flex;
@@ -226,7 +229,7 @@ main {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  height: 160px;
+  max-height: 160px;
   width: 100%;
   background-color: #1a323e;
 }
@@ -291,12 +294,11 @@ main {
   gap: 20px;
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
 }
 .content-box img {
   border-radius: 4px;
-  width: 220px;
-  height: 310px;
+  max-width: 220px;
+  max-height: 310px;
 }
 .content-box {
   color: aliceblue;
@@ -335,7 +337,9 @@ main {
   padding-left: 15px;
 }
 .trend-films-box:hover {
-  transform: translate(10px, 10px);
+  /* transform: translate(10px, 10px);
+   */
+  transform: scale(1.02);
 }
 
 .trend-films-box img {
@@ -389,3 +393,82 @@ h5 {
   margin-top: 15px;
 }
 /* footer end  */
+@media only screen and (max-width: 600px) {
+  .content-right {
+    display: none;
+  }
+  .download-box {
+    gap: 10px;
+    min-height: 110px;
+    display: flex;
+    flex-direction: column;
+  }
+  .download-box a {
+    margin-left: 0px;
+  }
+  .nav {
+    /* width: 100vw; */
+  }
+  .navbar {
+    margin: 0px;
+    padding: 0px 10px;
+    align-items: center;
+    gap: 4px;
+  }
+  .navbar-link a {
+    display: none;
+  }
+  .navbar-link i {
+    color: white;
+    font-size: 20px;
+    display: flex;
+  }
+  .content-boxs {
+    flex-direction: column;
+    grid-template-columns: auto auto;
+  }
+  .content-left {
+    width: 60vw;
+    border-right: none;
+  }
+
+  .trailers {
+    text-align: center;
+  }
+  main .container {
+    padding-top: 6px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .small-films {
+    overflow: auto;
+  }
+  .navbar-alt-left {
+    gap: 4px;
+    padding-left: 0px;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .navbar-alt-left a {
+    text-align: center;
+    margin: 10px;
+    border-radius: 8px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #345362 !important;
+  }
+  .navbar-alt-right {
+    background: #19313e;
+    display: grid;
+    grid-template-columns: auto auto;
+    flex-direction: column;
+  }
+  footer .container {
+    padding: 0px;
+  }
+  .footer-text {
+    line-height: 20px !important;
+  }
+}
